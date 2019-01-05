@@ -1,0 +1,11 @@
+# PHP Container
+php:
+    # Description of the container
+
+# MySQL Container
+db:
+    # Description of the container
+
+# PhpMyAdmin container
+phpmyadmin:
+    # Description of the container
