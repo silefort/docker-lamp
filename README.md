@@ -1,6 +1,8 @@
 # docker-lamp
 A simple Docker LAMP Environment
 
+Taken from Linux Pratique #111
+
 ## Architecture
 
 ```
@@ -9,3 +11,11 @@ A simple Docker LAMP Environment
 [         Docker Engine        ]
 |port:80||         || port:8181|
 ```
+
+## Run
+
+```
+docker-compose up
+```
+
+Access PHPMyAdmin interface through http://localhost:8181
