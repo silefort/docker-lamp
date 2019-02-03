@@ -1,20 +1,5 @@
-# PHP Container
-php:
-  # Description of the container
-  build: ./engine/php_server/
-  ports:
-    - 80:80
-  volumes:
-    - $PWD/files/www/html:/var/www/html
-  links:
-    - db
-  dns:
-    - 1.1.1.1
-    - 1.0.0.1
-
 # MySQL Container
 db:
-  # Description of the container
   image: mysql
   environment:
     MYSQL_ROOT_PASSWORD: Secret
@@ -26,7 +11,6 @@ db:
 
 # PhpMyAdmin container
 phpmyadmin:
-  # Description of the container
   image: phpmyadmin/phpmyadmin
   links:
     - db
@@ -35,3 +19,16 @@ phpmyadmin:
   environment:
     MYSQL_USERNAME: root
     MYSQL_ROOT_PASSWORD: Secret
+
+# PHP Container
+php:
+  build: ./engine/php_server/
+  ports:
+    - 80:80
+  volumes:
+    - $PWD/files/www/html:/var/www/html
+  links:
+    - db
+  dns:
+    - 1.1.1.1
+    - 1.0.0.1
